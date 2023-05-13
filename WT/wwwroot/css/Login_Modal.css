@@ -1,0 +1,58 @@
+﻿
+.container {
+    padding: 1rem 0rem;
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 400px;
+       
+       
+{
+    padding: 1rem;
+}
+}
+
+h4 {
+    margin-bottom: 2rem;
+}
+.btn-custom {
+    font-size:1.5rem;
+}
+    .text-info {
+    color: #68c1c4;
+}
+.modal-header {
+    .close
+
+{
+    margin-top: -1.5rem;
+}
+
+}
+
+.form-title {
+    margin: -2rem 0rem 2rem;
+}
+
+.btn-round {
+    border-radius: 3rem;
+}
+
+.delimiter {
+    padding: 1rem;
+}
+
+.social-buttons {
+  
+
+{
+    margin: 0 0.5rem 1rem;
+}
+
+}
+
+.signup-section {
+    padding: 0.3rem 0rem;
+   
+}

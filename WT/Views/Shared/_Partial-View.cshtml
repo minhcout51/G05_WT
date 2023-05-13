@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> WebToy</title>
+    <link rel="stylesheet" href="~/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/wwwroot/css/site.css" />
+    <link rel="stylesheet" href="~/wwwroot/css/Partial_View.css" />
+      <link rel="icon" type="image/png" sizes="64x64" href="~/wwwroot/Images/Logo-NoBackground.png" />
+ 
+     <script src="~/js/Login_Modal.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link  type="stylesheet" href="~/wwwroot/css/Login_Modal.css"/>
+    
+</head>
+
+    <header class="">
+        @*1st Navbar*@
+       <nav class="navbar navbar-expand-sm navbar-light bg-light justify-content-center" style="height:3.5rem;">
+           <ul class="ul-1st">
+  <li class="li-1st"><div class="a-Logo"><a class="navbar-brand"  asp-area="" asp-controller="Home" asp-action="Index"><img src="~/wwwroot/Images/Logo-NoBackground100.png"/></a></div></li>
+  
+  <li class="li-1st"><div class="">
+        <input placeholder="Tìm kiếm sản phẩm" class="form-control Search "  type="text" >
+     </div> </li>
+      
+      <li class="li-1st"><div>
+                 <button type="button" class="btn btn-primary Login"  @*asp-area="" asp-controller="Home" asp-action="Login_Modal"*@ data-toggle="modal" data-target="#loginModal">Đăng nhập</button>
+         </div></li></ul>
+
+        
+</nav>
+            @* 2nd navbar style="background-color:#F5FFFA;" *@
+        <nav  style="background-color:#FFEFD5;" class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow">
+            <div class="container ">
+               
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between " >
+                    <ul class="navbar-nav flex-grow-1" >
+                        <li class="nav-item" id="2nd-li">
+                            <a class="nav-link text-dark TrangChu" asp-area="" asp-controller="Home" asp-action="Index">Trang chủ</a>
+                        </li>
+                        
+                          @*<li class="nav-item" id="2nd-li">
+                             <div class="dropdown">
+    <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" asp-controller="Product" asp-action="Product_List">
+    Sản phẩm
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item " href="#">Đồ chơi nhà bếp</a>
+    <a class="dropdown-item " href="#">Đồ chơi xếp hình</a>
+    
+  </div>
+</div>
+                        </li>*@
+                        <li class="nav-item" id="2nd-li">
+                            <a class="nav-link text-dark " asp-area="" asp-controller="Product" asp-action="Index">Sản phẩm</a>
+                        </li>
+                        <li class="nav-item" id="2nd-li">
+                             <div class="dropdown">
+    <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Độ tuổi
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">0 - 12 tháng</a>
+    <a class="dropdown-item" href="#">1 - 3 tuổi</a>
+    <a class="dropdown-item" href="#">3 - 5 tuổi</a>
+    <a class="dropdown-item" href="#">Trên 5 tuổi</a>
+
+  </div>
+</div>
+                        </li>
+                       @* <li class="nav-item" id="2nd-li">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Login_Modal">Login</a>
+                        </li>*@
+                      
+                           <li class="nav-item" id="2nd-li">
+                             <a class="nav-link text-dark" href="#">Khuyến mãi</a>
+                       </li>
+                       <li class="nav-item" id="2nd-li">
+                             <a class="nav-link text-dark" href="#">Giỏ hàng</a>
+                       </li>
+                       <li class="nav-item" id="2nd-li">
+                             <a class="nav-link text-dark" href="#">Hệ thống cửa hàng</a>
+                       </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <body>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    </body>
+    @*Footer*@
+<footer class="border-top footer text-muted">
+    <div class="container-footer">
+        <div class="Logo">
+            <img class="WebToy-Logo" alt="WebToy logo" src="~/wwwroot/Images/Logo.png" />
+        </div>
+        <div class="LienHe">
+            <ul class="DanhSach-ThongTin">
+                <li class="Li-ThongTin"> Điện thoại: 0123456789</li>
+                <li class="Li-ThongTin"> Email: g05webtoy@gmail.com</li>
+                <li class="Li-ThongTin"> Địa chỉ: 1 Quang Trung Quận 12</li>
+            </ul>
+        </div>
+        <div class="ThongTin">
+            <p class="P-ThongTin">WebToy là cửa hàng bán đồ chơi <br /> gồm nhiều sản phẩm với nhiều loại đồ chơi khác nhau <br /> dành cho trẻ em nhiều độ tuổi khác nhau</p>
+        </div>
+        <div class="ThanhToan">
+            <ul class="DanhSach_MXH">
+                <p class="KetNoi"> Kết nối với chúng tôi</p>
+                <a target="_blank" href="https://www.facebook.com"><img src="~/wwwroot/Images/facebook.png" /></a>
+                <a target="_blank" href="https://www.facebook.com"><img src="~/wwwroot/Images/instagram.png" /></a>
+                <a target="_blank" href="https://discord.com"><img src="~/wwwroot/Images/discord.png" /></a>
+            </ul>
+            <ul class="DanhSach_ThanhToan">
+                <p class="ThanhToan">Phương thức thanh toán</p>
+                <a target="_blank" href=""><img src="~/wwwroot/Images/cash.png" /></a>
+                <a target="_blank" href=""><img src="~/wwwroot/Images/cashless-payment.png" /></a>
+                <a target="_blank" href=""><img src="~/wwwroot/Images/cash-on-delivery.png" /></a>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+    <script src="~/wwwroot/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/wwwroot/js/site.js" asp-append-version="true"></script>
+    
+</html>
+@*Đăng nhập*@
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header border-bottom-0">
+        
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         &times;
+        </button>
+      </div>
+      
+      <div class="modal-body">
+        <div class="form-title text-center">
+          <h4>Đăng nhập</h4>
+        </div>
+        <div class="d-flex flex-column text-center">
+          <form>
+            <div class="form-group">
+              <input type="email" class="form-control" id="username1"placeholder="User name ...">
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" id="password1" placeholder="Mật khẩu ...">
+            </div>
+            <div class="Button">
+            <button type="button" class="btn btn-info btn-block btn-round btn-xs Login-Modal">Đăng nhập </button>
+             <div class="modal-footer d-flex justify-content-center">
+        <div class="signup-section" style="font-size:1.23rem;">Chưa có tài khoản? </div>
+        <div class="SignUp-Button-Div"><button type="button" class="btn btn-secondary btn-block btn-round btn-xs SignUp" data-toggle="modal" data-target="#signupModal" href="..//Views/Home/SignUp_Modal.cshtml"> Đăng ký </button></div></div>
+      </div>
+          </form>     
+          <div class="d-flex justify-content-center social-buttons">
+          </div>
+        </div>
+      </div>
+    </div>
+      
+  </div>
+</div>
+@* Đăng ký*@
+<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header border-bottom-0">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         &times;
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-title text-center">
+          <h4>Đăng ký</h4>
+        </div>
+        <div class="d-flex flex-column text-center">
+          <form >
+            <div class="form-group">
+              <input type="email" class="form-control" id="username1"placeholder="User name ...">
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" id="password1" placeholder="Mật khẩu ...">
+            </div>
+            <div class="Button">
+            <button type="button" class="btn btn-info btn-block btn-round btn-xs">Đăng ký </button>
+             <div class="modal-footer d-flex justify-content-center">
+
+      </div>
+          </form>     
+          <div class="d-flex justify-content-center social-buttons">
+          </div>
+        </div>
+      </div>
+    </div>
+     
+  </div>
+</div>

@@ -1,0 +1,86 @@
+﻿.container {
+    display: flex;
+    
+}
+
+.a-Logo {
+    margin-top: 0.5rem
+}
+.container-footer {
+    display: flex;
+    padding-left: 17rem;
+}
+.ul-1st {
+    padding-right: 6.25rem;
+    display: flex;
+}
+.WebToy-Logo {
+    margin-top: 1.2rem;
+    width: 9rem;
+    height: 9rem;
+}
+/*.DanhSach-ThongTin > Li-ThongTin {
+    margin: 0.5rem 0;
+}*/
+.Li-ThongTin {
+    font-size: 1.2rem;
+    padding: 0.0005rem 0 0.00001rem 0;
+   
+}
+.KetNoi, .ThanhToan {
+    font-size: 1.3rem;
+}
+.DanhSach_MXH {
+    margin: 2.2rem 0 0 0;
+    line-height: 1rem;
+}
+.DanhSach_ThanhToan {
+    margin: 1rem 0 0 0;
+    line-height: 1rem;
+}
+footer {
+     background-color: #FFEFD5;
+    height: 12.3rem;
+}
+.ThongTin {
+    margin: 1.4rem 0 0 1rem;
+    font-size: 1.4rem;
+    line-height: 2;
+}
+.Search {
+    width: 32rem;
+    margin: 2.56rem 1rem 0 0;
+    border-color: rgb(0,0,0,0.4);
+}
+
+.ul-1st {
+    list-style-type: none;
+    display: flex;
+}
+
+.li-1st {
+    padding: 0.8rem 0 0 0;
+}
+
+#dropdownMenuButton {
+    background-color: #FFEFD5;
+    font-size: 1.2rem;
+    text-indent: 0.2rem;
+    padding: 0.5rem;
+}
+.dropdown-item:hover {
+    color: #FFEFD5;
+}
+.navbar-nav > li {
+    padding: 0 1rem 0 1rem;
+    font-size: 1.2rem;
+}
+.Login{
+    margin: 2.53rem 1.01rem 0 0;
+}
+.Login:hover {
+    background-color: white;
+    color: #0275d8;
+   
+}
+
