@@ -1230,6 +1230,7 @@
     <Content Include="Views\Shared\AdLayout.cshtml" />
     <Content Include="Views\Admin\Edit.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Admin\Admin_Partial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
