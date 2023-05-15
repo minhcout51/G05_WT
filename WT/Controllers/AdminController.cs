@@ -20,7 +20,11 @@ namespace WT.Controllers
             dbcontext = new MongoDBContext();
         productCollection = dbcontext.database.GetCollection<Product>("ThongTinSanPham"); //we are getting collection //product is collection name
         }
-    public ActionResult Index()
+        public ActionResult Index()
+        {
+            return View();
+        }
+        public ActionResult ProductIndex()
         {
             List<Product> products = productCollection.AsQueryable<Product>().ToList();
             return View(products);
@@ -28,7 +32,7 @@ namespace WT.Controllers
         }
      
         // GET: Admin/Details/5
-        public ActionResult Details(string id)
+        public ActionResult ProductDetails(string id)
         {
             var productId = new ObjectId(id);
 
@@ -38,14 +42,14 @@ namespace WT.Controllers
         }
 
         // GET: Admin/Create
-        public ActionResult Create()
+        public ActionResult CreateProduct()
         {
             return View();
         }
 
         // POST: Admin/Create
         [HttpPost]
-        public ActionResult Create(Product product)
+        public ActionResult CreateProduct(Product product)
         {
             try
             {
@@ -61,7 +65,7 @@ namespace WT.Controllers
         }
 
         // GET: Admin/Edit/5
-        public ActionResult Edit(string id)
+        public ActionResult EditProduct(string id)
         {
             var productId = new ObjectId(id);
             var product = productCollection.AsQueryable<Product>().SingleOrDefault(x => x.Id == productId);
@@ -70,7 +74,7 @@ namespace WT.Controllers
 
         // POST: Admin/Edit/5
         [HttpPost]
-        public ActionResult Edit(string id, Product product)
+        public ActionResult EditProduct(string id, Product product)
         {
             try
             {
@@ -87,7 +91,7 @@ namespace WT.Controllers
         }
 
         // GET: Admin/Delete/5
-        public ActionResult Delete(string id)
+        public ActionResult DeleteProduct(string id)
         {
             var productId = new ObjectId(id);
             var product = productCollection.AsQueryable<Product>().SingleOrDefault(x => x.Id == productId);
@@ -96,7 +100,7 @@ namespace WT.Controllers
 
         // POST: Admin/Delete/5
         [HttpPost]
-        public ActionResult Delete(string id, FormCollection collection)
+        public ActionResult DeleteProduct(string id, FormCollection collection)
         {
             try
             {

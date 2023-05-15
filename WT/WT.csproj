@@ -1034,6 +1034,7 @@
     <Content Include="wwwroot\Images\SanPham\BanhKemMini.jpg" />
     <Content Include="wwwroot\Images\SanPham\Lego-CuopBien.png" />
     <Content Include="wwwroot\Images\SanPham\Lego-KhungLong.png" />
+    <Content Include="wwwroot\js\HomeIndex.js" />
     <Content Include="wwwroot\js\Login_Modal.js" />
     <Content Include="wwwroot\js\site.js" />
     <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css" />
@@ -1081,9 +1082,9 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
-    <Content Include="Views\Admin\Create.cshtml" />
-    <Content Include="Views\Admin\Details.cshtml" />
-    <Content Include="Views\Admin\Delete.cshtml" />
+    <Content Include="Views\Admin\CreateProduct.cshtml" />
+    <Content Include="Views\Admin\ProductDetails.cshtml" />
+    <Content Include="Views\Admin\DeleteProduct.cshtml" />
     <Content Include="wwwroot\Admin\css\maps\style.css.map" />
     <Content Include="wwwroot\Admin\fonts\Assistant\Assistant-Bold.eot" />
     <Content Include="wwwroot\Admin\fonts\Assistant\Assistant-Bold.ttf" />
@@ -1229,8 +1230,9 @@
     <Content Include="Views\Shared\_Partial-View.cshtml" />
     <Content Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
     <Content Include="Views\Shared\AdLayout.cshtml" />
-    <Content Include="Views\Admin\Edit.cshtml" />
+    <Content Include="Views\Admin\EditProduct.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Admin\ProductIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
