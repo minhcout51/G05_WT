@@ -117,9 +117,11 @@
     opacity: 0; }
   100% {
     opacity: 1; } }
-
+.Ad-Body{
+    display:flex;
+}
 @-webkit-keyframes flash {
-  0% {
+    0% {
     opacity: 1; }
   25% {
     opacity: 0; }

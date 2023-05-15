@@ -1014,6 +1014,7 @@
     <Content Include="wwwroot\Admin\vendors\select2\select2.min.css" />
     <Content Include="wwwroot\Admin\vendors\select2\select2.min.js" />
     <Content Include="wwwroot\Admin\vendors\typeahead.js\typeahead.bundle.min.js" />
+    <Content Include="wwwroot\css\HomeIndex.css" />
     <Content Include="wwwroot\css\Login_Modal.css" />
     <Content Include="wwwroot\css\Partial_View.css" />
     <Content Include="wwwroot\css\SignUp_Modal.css" />
@@ -1230,7 +1231,6 @@
     <Content Include="Views\Shared\AdLayout.cshtml" />
     <Content Include="Views\Admin\Edit.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Admin\Admin_Partial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
