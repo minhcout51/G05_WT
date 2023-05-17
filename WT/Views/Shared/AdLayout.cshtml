@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Management </title>
+    <title>WebToy Warehouse </title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="~/wwwroot/Admin//vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="~/wwwroot/Admin//vendors/css/vendor.bundle.base.css">
@@ -21,11 +21,11 @@
     <!-- Layout styles -->
     <link rel="stylesheet" href="~/wwwroot/Admin//css/style.css">
     <!-- End layout styles -->
-    <link rel="shortcut icon" href="~/wwwroot/Admin//images/favicon.png" />
+    <link rel="icon" type="image/png" sizes="64x64" href="~/wwwroot/Images/Logo.png" />
 </head>
 <body>
     <div class="Ad-Body">
-        <div class="container-scroller">
+        <div class="container-scroller" style="width: 100%; background-color: white;">
             <!-- partial:partials/_sidebar.html -->
             <nav class="sidebar sidebar-offcanvas" id="sidebar">
                 <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
@@ -42,7 +42,7 @@
                                 </div>
                                 <div class="profile-name">
                                     <h5 class="mb-0 font-weight-normal">Ngoc Minh </h5>
-                                    <span>Gold Member</span>
+                                    <span>Warehouse Manager</span>
                                 </div>
                             </div>
                             <a href="#" id="profile-dropdown" data-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
@@ -103,26 +103,13 @@
                         </a>
                         <div class="collapse" id="ui-basic">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="@Url.Action("ProductIndex","Admin")">View All Products</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="@Url.Action("AddProduct","Admin")"> Add Product </a></li>
+                                @*<li class="nav-item"> <a class="nav-link" href="@Url.Action("ProductIndex","Admin")">View All Products</a></li>*@
+                                <li>  @Html.ActionLink("View All Products", "Product", "Admin") </li>
+                         
                             </ul>
                         </div>
                     </li>
-                    <li class="nav-item menu-items">
-                        <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                            <span class="menu-icon">
-                                <i class="mdi mdi-laptop"></i>
-                            </span>
-                            <span class="menu-title"> Product Management</span>
-                            <i class="menu-arrow"></i>
-                        </a>
-                        <div class="collapse" id="ui-basic">
-                            <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="@Url.Action("GetAllCategories","Admin")">View All Categories</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="@Url.Action("AddCategory","Admin")"> Add Category </a></li>
-                            </ul>
-                        </div>
-                    </li>
+                
                     <li class="nav-item menu-items">
                         <a class="nav-link" data-toggle="collapse" href="#ui-basic1" aria-expanded="false" aria-controls="ui-basic1">
                             <span class="menu-icon">
@@ -133,7 +120,7 @@
                         </a>
                         <div class="collapse" id="ui-basic1">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="@Url.Action("GetAllBills","Admin")">View All Bils</a></li>
+                                <li>  @Html.ActionLink("View All Bills", "Bill", "Admin") </li>
 
                             </ul>
                         </div>
@@ -144,13 +131,13 @@
                             <span class="menu-icon">
                                 <i class="mdi mdi-table-large"></i>
                             </span>
-                            <span class="menu-title">Store Location Management </span>
+                            <span class="menu-title">Employee </span>
                             <i class="menu-arrow"></i>
                         </a>
                         <div class="collapse" id="ui-basic2">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="@Url.Action("GetAllStoreAddresses","Admin")">View All Store Addresses</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="@Url.Action("AddStoreAddress","Admin")"> Add Store Address </a></li>
+                                <li>  @Html.ActionLink("View All Employees", "Employee", "Admin") </li>
+                           
                             </ul>
                         </div>
                     </li>
@@ -164,27 +151,13 @@
                         </a>
                         <div class="collapse" id="ui-basic3">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="@Url.Action("GetAllCustomers","Admin")">View All Customers</a></li>
+                                <li>  @Html.ActionLink("View All Customers", "Customer", "Admin") </li>
                                 @* <li class="nav-item"> <a class="nav-link" href="@Url.Action("AddStoreAddress","Admin")"> Add Store Addresses </a></li> *@
                             </ul>
                         </div>
                     </li>
 
-                    <li class="nav-item menu-items">
-                        <a class="nav-link" data-toggle="collapse" href="#ui-basic4" aria-expanded="false" aria-controls="ui-basic4">
-                            <span class="menu-icon">
-                                <i class="mdi mdi-contacts"></i>
-                            </span>
-                            <span class="menu-title">Employee Management</span>
-                            <i class="menu-arrow"></i>
-                        </a>
-                        <div class="collapse" id="ui-basic4">
-                            <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="@Url.Action("GetAllEmployees","Admin")">View All Employees</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="@Url.Action("AddEmployee","Admin")"> Add Employee </a></li>
-                            </ul>
-                        </div>
-                    </li>
+        
 
                     <li class="nav-item menu-items">
                         <a class="nav-link" href="http://www.bootstrapdash.com/demo/corona-free/jquery/documentation/documentation.html">
@@ -198,7 +171,7 @@
             </nav>
             <!-- partial -->
 
-            <div class="container">
+            <div class="container"  style ="background-color:white; width:100rem; margin:4rem 20rem 0 0;">
                 <main role="main" class="pb-3">
                     @RenderBody()
                 </main>

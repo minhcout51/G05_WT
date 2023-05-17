@@ -1,0 +1,52 @@
+﻿@model IEnumerable<WT.Models.Employee>
+
+@{
+    ViewBag.Title = "Employee";
+    Layout = "~/Views/Shared/AdLayout.cshtml";
+}
+
+<h2>Employee</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreateEmployee")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Job)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Job)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfBirth)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditEmployee", new { id=item.Id  }) |
+            @Html.ActionLink("Details", "EmployeeDetails", new { id = item.Id }) |
+            @Html.ActionLink("Delete", "DeleteEmployee", new { id = item.Id })
+        </td>
+    </tr>
+}
+
+</table>

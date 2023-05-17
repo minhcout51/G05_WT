@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/AdLayout.cshtml";
 }
 
 <h2>Details</h2>
@@ -10,13 +11,7 @@
     <h4>Product</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Id)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Id)
-        </dd>
+        
         <dt>
             @Html.DisplayNameFor(model => model.Name)
         </dt>
