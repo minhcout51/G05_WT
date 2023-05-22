@@ -1,8 +1,7 @@
-﻿h2{
-    color:black;
-    font-family:sans-serif;
-    font-size:3rem;
+﻿.Title{
+    color:white;
 }
-.actionlink{
-    font-size:2rem;
+
+th{
+    color:green;
 }

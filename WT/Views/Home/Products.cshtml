@@ -1,0 +1,40 @@
+﻿@model IEnumerable<WT.Models.Product>
+
+@{
+    ViewBag.Title = "Products";
+}
+<link rel="stylesheet" href="~/wwwroot/css/ProductList.css" />
+
+    @foreach (var item in Model)
+    {
+        <div class="Product-Div">
+            <div class="Product-Image"><img class="Image" src="~/wwwroot/Images/SanPham/@Html.DisplayFor(modelItem =>item.Image)" /></div>
+            
+            <div class="Detail">
+                <h5>@Html.DisplayFor(modelItem => item.Name)  <br /></h5>
+
+
+                <h5>@Html.DisplayFor(modelItem => item.Price)<br /></h5>
+
+                <h5>Độ tuổi: @Html.DisplayFor(modelItem => item.Age)<br /></h5>
+     
+                <h5>@Html.ActionLink("Xem sản phẩm", "ProductDetail", new { id = item.Id })</h5>
+            </div>
+            </div>
+    }
+
+<style>
+    .Image{
+        max-width:10rem;
+        height:auto;
+        image-rendering:auto;
+        overflow:auto;
+
+    }
+    .Product-Image{
+        margin: 1rem 0 0 0;
+    }
+    .Detail{
+        margin: 1rem 0 0 1rem;
+    }
+</style>

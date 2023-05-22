@@ -4,12 +4,15 @@
     ViewBag.Title = "Product";
     Layout = "~/Views/Shared/AdLayout.cshtml";
 }
-<link rel="stylesheet" href="~/wwwroot/Admin/css/CRUD/ProductIndex.css"/>
-<h2>Product Management</h2>
 
-<p>
+<button onclick="location.href='@Url.Action("Index", "Admin")';return false;">Homepage</button>
+
+<h2 class="Title">Product Management</h2>
+
+
+<h3>
     @Html.ActionLink("Create New Product", "CreateProduct")
-</p>
+</h3>
 <table class="table">
     <tr>
         <th>
@@ -33,32 +36,69 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Category)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Brand)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Price)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Age)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Image)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "EditProduct", new { id = item.Id }) |
-            @Html.ActionLink("Details", "ProductDetails", new { id = item.Id }) |
-            @Html.ActionLink("Delete", "DeleteProduct", new { id = item.Id })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Brand)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                <img  class="Image" src="~/wwwroot/Images/SanPham/@Html.DisplayFor(modelItem =>item.Image)" />
+                @*@Html.DisplayFor(modelItem => item.Image)*@
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "EditProduct", new { id = item.Id }, new { @style = "font-size:1.5rem;" }) |
+                @Html.ActionLink("Details", "ProductDetails", new { id = item.Id }, new { @style = "font-size:1.5rem; margin-left: 0.3rem;" }) |
+                @Html.ActionLink("Delete", "DeleteProduct", new { id = item.Id }, new { @style = "font-size:1.5rem; margin-left: 0.3rem;" })
+            </td>
+        </tr>
+    }
 
 </table>
+
+<style>
+    .Image {
+        max-width: 10rem;
+        height: auto;
+    }
+    th {
+        color: #00AA95;
+        font-size: 4rem;
+    }
+
+    td {
+        font-size: 3rem;
+        color: white;
+    }
+
+    h2 {
+        color: white;
+        margin: 0.5rem 0 0 0;
+    }
+    h3{
+        margin: 1rem 0 0 0;
+    }
+    table{
+        margin: 1rem 0 0 0;
+    }
+    button{
+        background-color:white;
+
+    }
+        button:hover {
+            background-color: #00AA95;
+            opacity: 100%;
+        }
+</style>

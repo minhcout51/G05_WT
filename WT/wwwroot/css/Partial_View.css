@@ -1,7 +1,9 @@
 ﻿.container {
 
 }
-
+a.SanPhamAL{
+    text-decoration:none;
+}
 .a-Logo {
     margin-top: 0.5rem
 }
@@ -63,12 +65,17 @@ footer {
 
 #dropdownMenuButton {
     background-color: #FFEFD5;
+    
     font-size: 1.2rem;
     text-indent: 0.2rem;
     padding: 0.5rem;
 }
 .dropdown-item:hover {
     color: #FFEFD5;
+    background-color: black;
+}
+.dropdown-menu:hover{
+    color:black;
 }
 .navbar-nav > li {
     padding: 0 1rem 0 1rem;

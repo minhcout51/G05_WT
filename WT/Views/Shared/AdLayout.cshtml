@@ -25,7 +25,7 @@
 </head>
 <body>
     <div class="Ad-Body">
-        <div class="container-scroller" style="width: 100%; background-color: white;">
+        <div class="container-scroller" style=" background-color: rgba(25,28,37,255); " >
             <!-- partial:partials/_sidebar.html -->
             <nav class="sidebar sidebar-offcanvas" id="sidebar">
                 <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
@@ -92,6 +92,7 @@
                             </span>
                             <span class="menu-title">Dashboard</span>
                         </a>
+                      
                     </li>
                     <li class="nav-item menu-items">
                         <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
@@ -105,11 +106,11 @@
                             <ul class="nav flex-column sub-menu">
                                 @*<li class="nav-item"> <a class="nav-link" href="@Url.Action("ProductIndex","Admin")">View All Products</a></li>*@
                                 <li>  @Html.ActionLink("View All Products", "Product", "Admin") </li>
-                         
+
                             </ul>
                         </div>
                     </li>
-                
+
                     <li class="nav-item menu-items">
                         <a class="nav-link" data-toggle="collapse" href="#ui-basic1" aria-expanded="false" aria-controls="ui-basic1">
                             <span class="menu-icon">
@@ -137,7 +138,7 @@
                         <div class="collapse" id="ui-basic2">
                             <ul class="nav flex-column sub-menu">
                                 <li>  @Html.ActionLink("View All Employees", "Employee", "Admin") </li>
-                           
+
                             </ul>
                         </div>
                     </li>
@@ -157,7 +158,7 @@
                         </div>
                     </li>
 
-        
+
 
                     <li class="nav-item menu-items">
                         <a class="nav-link" href="http://www.bootstrapdash.com/demo/corona-free/jquery/documentation/documentation.html">
@@ -168,15 +169,17 @@
                         </a>
                     </li>
                 </ul>
+
             </nav>
             <!-- partial -->
-
-            <div class="container"  style ="background-color:white; width:100rem; margin:4rem 20rem 0 0;">
+            <div class="container" style="background-color: #191c25;  width: 100%; margin: 4rem 0 0 0;">
                 <main role="main" class="pb-3">
                     @RenderBody()
                 </main>
             </div>
+
         </div>
+        
     </div>
     <!-- content-wrapper ends -->
     <!-- partial:partials/_footer.html -->

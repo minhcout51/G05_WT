@@ -1,17 +1,15 @@
 ﻿@model WT.Models.Product
 
 @{
-    ViewBag.Title = "Details";
-    Layout = "~/Views/Shared/AdLayout.cshtml";
+    ViewBag.Title = "ProductDetail";
 }
 
-<h2> Product Details</h2>
+<h2>ProductDetail</h2>
 
 <div>
-   
+    <h4>Product</h4>
     <hr />
     <dl class="dl-horizontal">
-        
         <dt>
             @Html.DisplayNameFor(model => model.Name)
         </dt>
@@ -57,25 +55,12 @@
         </dt>
 
         <dd>
-            <img class="Image" src="~/wwwroot/Images/SanPham/@Html.DisplayFor(model =>model.Image)" />
+            @Html.DisplayFor(model => model.Image)
         </dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "EditProduct", "Admin", new{ id = Model.Id  }, new { @style = "font-size:1.5rem; " }) |
-    @Html.ActionLink("Back to List", "Product", "Admin",new {@style="font-size: 1.5rem;"})
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
 </p>
-<style>
-    .Image{
-        width:10rem;
-        height:10rem;
-    }
-    dt {
-        color: #00AA95;
-        font-size: 1.2rem;
-    }
-    dd {
-        font-size: 1.4rem;
-    }
-</style>

@@ -233,6 +233,7 @@
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1134,6 +1135,7 @@
     <Content Include="wwwroot\css\HomeIndex.css" />
     <Content Include="wwwroot\css\Login_Modal.css" />
     <Content Include="wwwroot\css\Partial_View.css" />
+    <Content Include="wwwroot\css\ProductList.css" />
     <Content Include="wwwroot\css\SignUp_Modal.css" />
     <Content Include="wwwroot\css\site.css" />
     <Content Include="wwwroot\favicon.ico" />
@@ -1205,7 +1207,6 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
@@ -1353,7 +1354,6 @@
     <Content Include="wwwroot\lib\bootstrap\LICENSE" />
     <Content Include="wwwroot\lib\jquery-validation\LICENSE.md" />
     <Content Include="wwwroot\lib\jquery\dist\jquery.min.map" />
-    <Content Include="Views\Shared\_Partial-View.cshtml" />
     <Content Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
     <Content Include="Views\Shared\AdLayout.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -1376,10 +1376,14 @@
     <Content Include="Views\Admin\EditCustomer.cshtml" />
     <Content Include="Views\Admin\DeleteCustomer.cshtml" />
     <Content Include="Views\Admin\Customer.cshtml" />
+    <Content Include="Views\Shared\_Partial-View.cshtml" />
+    <Content Include="Views\Home\Products.cshtml" />
+    <Content Include="Views\Home\ProductDetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Admin\Product\" />
+    <Folder Include="Views\Cart\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
