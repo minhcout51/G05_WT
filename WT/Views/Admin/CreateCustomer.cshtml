@@ -57,12 +57,23 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Create" class="btn btn-light Create-Button" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Customer")
+    @Html.ActionLink("Back to List", "Customer","Admin", new { @style = "font-size: 1.5rem;" })
 </div>
+<style>
+    .Create-Button {
+        width: 5rem;
+        height: 2rem;
+    }
+
+        .Create-Button:hover {
+            background-color: #00AA95;
+            color: white;
+        }
+</style>

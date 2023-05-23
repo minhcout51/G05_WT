@@ -5,11 +5,11 @@
     Layout = "~/Views/Shared/AdLayout.cshtml";
 }
 
-<h2>DeleteEmployee</h2>
+<h2>Delete Employee</h2>
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>Employee</h4>
+    <h4>Employee Details</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -50,8 +50,32 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Employee")
+            <input type="submit" value="Delete" class="btn btn-light Delete-Button" /> |
+            @Html.ActionLink("Back to List", "Employee", "Admin", new { @style = "font-size: 1.5rem; margin-top:0.5rem;" })
         </div>
     }
 </div>
+<style>
+    .Image {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    h4 {
+        margin: 2rem 0 -1.5rem 0;
+    }
+
+    .Delete-Button {
+        width: 5rem;
+        height: 2rem;
+    }
+
+        .Delete-Button:hover {
+            background-color: #00AA95;
+            color: white;
+        }
+
+    dt {
+        color: #00AA95
+    }
+</style>

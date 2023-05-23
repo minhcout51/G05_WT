@@ -5,14 +5,14 @@
     Layout = "~/Views/Shared/AdLayout.cshtml";
 }
 
-<h2>EditBill</h2>
+<h2>Edit Bill</h2>
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Bill</h4>
+        <h4>Bill Details</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
@@ -73,12 +73,31 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Save" class="btn btn-light Save-Button" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Bill")
+    @Html.ActionLink("Back to List", "Bill", "Admin", new { @style = "font-size: 1.5rem;" })
 </div>
+<style>
+    .col-md-10 {
+        color: #00AA95;
+    }
+
+    input {
+    }
+
+    .Save-Button {
+        background-color: white;
+        width: 5rem;
+        height: 2rem;
+    }
+
+        .Save-Button:hover {
+            background-color: #00AA95;
+            color: white;
+        }
+</style>

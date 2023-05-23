@@ -4,10 +4,10 @@
     ViewBag.Title = "CustomerDetails";
 }
 
-<h2>CustomerDetails</h2>
+<h2>Customer Details</h2>
 
 <div>
-    <h4>Customer</h4>
+
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -53,6 +53,18 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "EditCustomer", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Customer")
+    @Html.ActionLink("Edit", "EditCustomer", new { id = Model.Id }, new { @style = "font-size:1.5rem; " }) |
+    @Html.ActionLink("Back to List", "Customer", "Admin", new { @style = "font-size: 1.5rem;" })
 </p>
+<style>
+  
+
+    dt {
+        color: #00AA95;
+        font-size: 1.2rem;
+    }
+
+    dd {
+        font-size: 1.4rem;
+    }
+</style>

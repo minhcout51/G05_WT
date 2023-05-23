@@ -5,11 +5,11 @@
     Layout = "~/Views/Shared/AdLayout.cshtml";
 }
 
-<h2>Customer</h2>
-
-<p>
+<h2>Customer Management</h2>
+ 
+<h3>
     @Html.ActionLink("Create New", "CreateCustomer")
-</p>
+</h3>
 <table class="table">
     <tr>
         <th>
@@ -48,11 +48,46 @@
             @Html.DisplayFor(modelItem => item.Password)
         </td>
         <td>
-            @Html.ActionLink("Edit", "EditCustomer", new {  id=item.Id }) |
-            @Html.ActionLink("Details", "CustomerDetails", new { id = item.Id }) |
-            @Html.ActionLink("Delete", "DeleteCustomer", new { id = item.Id })
+            @Html.ActionLink("Edit", "EditCustomer", new {  id=item.Id }, new { @style = "font-size:1.5rem;" }) |
+            @Html.ActionLink("Details", "CustomerDetails", new { id = item.Id }, new { @style = "font-size:1.5rem; margin-left: 0.3rem;" }) |
+            @Html.ActionLink("Delete", "DeleteCustomer", new { id = item.Id }, new { @style = "font-size:1.5rem; margin-left: 0.3rem;" })
         </td>
     </tr>
 }
 
 </table>
+<style>
+
+
+    th {
+        color: #00AA95;
+        font-size: 4rem;
+    }
+
+    td {
+        font-size: 3rem;
+        color: white;
+    }
+
+    h2 {
+        color: white;
+        margin: 0.5rem 0 0 0;
+    }
+
+    h3 {
+        margin: 1rem 0 0 0;
+    }
+
+    table {
+        margin: 1rem 0 0 0;
+    }
+
+    button {
+        background-color: white;
+    }
+
+        button:hover {
+            background-color: #00AA95;
+            opacity: 100%;
+        }
+</style>

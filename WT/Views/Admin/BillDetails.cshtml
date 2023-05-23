@@ -5,10 +5,10 @@
     Layout = "~/Views/Shared/AdLayout.cshtml";
 }
 
-<h2>BillDetails</h2>
+<h2>Bill Details</h2>
 
 <div>
-    <h4>Bill</h4>
+  
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -70,6 +70,21 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "EditBill", new {  id = Model.Id  }) |
-    @Html.ActionLink("Back to List", "Bill")
+    @Html.ActionLink("Edit", "EditBill", new {  id = Model.Id  },  new { @style = "font-size:1.5rem; " }) |
+    @Html.ActionLink("Back to List", "Bill", "Admin", new { @style = "font-size: 1.5rem;" })
 </p>
+<style>
+    .Image {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    dt {
+        color: #00AA95;
+        font-size: 1.2rem;
+    }
+
+    dd {
+        font-size: 1.4rem;
+    }
+</style>

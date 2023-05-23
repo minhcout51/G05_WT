@@ -90,7 +90,7 @@
                             <span class="menu-icon">
                                 <i class="mdi mdi-speedometer"></i>
                             </span>
-                            <span class="menu-title">Dashboard</span>
+                            <span class="menu-title"><button class="Homepage" onclick="location.href='@Url.Action("Index", "Admin")';return false;">Homepage</button></span>
                         </a>
                       
                     </li>
@@ -206,6 +206,13 @@
     <!-- endinject -->
     <!-- Custom js for this page -->
     <script src="~/wwwroot/Admin//js/dashboard.js"></script>
+    <style>
+        .Homepage {
+            background-color: #191c25;
+            border:none;
+            color:white;
+        }
+    </style>
     <!-- End custom js for this page -->
 </body>
 <footer class="footer">
