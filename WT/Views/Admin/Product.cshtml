@@ -55,8 +55,8 @@
                 @Html.DisplayFor(modelItem => item.Age)
             </td>
             <td>
-                <img  class="Image" src="~/wwwroot/Images/SanPham/@Html.DisplayFor(modelItem =>item.Image)" />
-                @*@Html.DisplayFor(modelItem => item.Image)*@
+                <img style="width: 5rem; height: 5rem; " class="Image" src="~/wwwroot/Images/SanPham/@Html.DisplayFor(modelItem =>item.Image)" />
+                
             </td>
             <td>
                 @Html.ActionLink("Edit", "EditProduct", new { id = item.Id }, new { @style = "font-size:1.5rem;" }) |
@@ -70,8 +70,8 @@
 
 <style>
     .Image {
-        max-width: 10rem;
-        height: auto;
+       width: 10rem;
+        height: 10rem;
     }
     th {
         color: #00AA95;

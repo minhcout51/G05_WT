@@ -7,6 +7,8 @@ using System.Web;
 using System.Web.Mvc;
 using WebApplication4.App_Start;
 using WT.Models;
+using System.IO;
+using System.Configuration;
 
 namespace WT.Controllers
 {
@@ -38,6 +40,7 @@ namespace WT.Controllers
         }
         public ActionResult Product()
         {
+            
             List<Product> products = productCollection.AsQueryable<Product>().ToList();
             return View(products);
            
@@ -63,6 +66,7 @@ namespace WT.Controllers
         [HttpPost]
         public ActionResult CreateProduct(Product product)
         {
+            
             try
             {
                 // TODO: Add insert logic here

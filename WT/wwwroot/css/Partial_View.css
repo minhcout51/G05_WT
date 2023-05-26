@@ -1,11 +1,14 @@
 ﻿.container {
 
 }
-a.SanPhamAL{
-    text-decoration:none;
+#DangNhap{
+    margin: 2.5rem 0 0 0;
+}
+a.SanPhamAL {
+    text-decoration: none;
 }
 .a-Logo {
-    margin-top: 0.5rem
+    margin-top: 0.5rem;
 }
 .container-footer {
     display: flex;

@@ -4,63 +4,30 @@
     ViewBag.Title = "ProductDetail";
 }
 
-<h2>ProductDetail</h2>
+<div class="Product-Details">
+    <div class="Product-Image"><img style="width: 25rem; height: 25rem; border: 0.1px solid black; border-radius:10px;  " src="~/wwwroot/Images/SanPham/@Html.DisplayFor(model =>model.Image)" /></div>
+    <div class="Product-Detail">
+        <h1>@Html.DisplayFor(model => model.Name)  <br /></h1>
 
-<div>
-    <h4>Product</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Category)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Category)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Brand)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Brand)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Price)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Age)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Age)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Image)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Image)
-        </dd>
-
-    </dl>
+        <h1 class="Product-Price">@Html.DisplayFor(model => model.Price) đ<br /></h1>
+        <h1>Độ tuổi: @Html.DisplayFor(model => model.Age) </h1>
+        <input type="button" class="btn btn-info" value="Let's Go!" onclick="location.href='@Url.Action("Action", "Controller")'" />
+         
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
+<style>
+    .Product-Details {
+        display: flex;
+        margin: 1rem 0 0 0;
+    }
+    .Product-Detail{
+        margin: 0 0 0 1.5rem;
+    }
+    h1 {
+        font-size: 1.5625rem;
+    }
+    .Product-Price {
+        color: #00AA95;
+    }
+</style>

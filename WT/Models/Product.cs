@@ -1,6 +1,7 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using System.ComponentModel.DataAnnotations;
+using System.Web;
 
 namespace WT.Models
 {
@@ -22,6 +23,7 @@ namespace WT.Models
         public string Age { get; set; }
         [BsonElement("HinhAnh")]
         public string Image { get; set; }
+        
     }
    
 }
