@@ -23,6 +23,7 @@ namespace WT.Controllers
         public MongoDBContext customerContext;
         public IMongoCollection<Customer> customerCollection;
         // GET: Admin
+        //qq
         public AdminController()
         {
             dbcontext = new MongoDBContext();
