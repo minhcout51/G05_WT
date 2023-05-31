@@ -1380,6 +1380,7 @@
     <Content Include="Views\Home\Products.cshtml" />
     <Content Include="Views\Home\ProductDetail.cshtml" />
     <Content Include="Views\Home\Cart.cshtml" />
+    <Content Include="Views\Home\AddToCart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -45,17 +45,39 @@ namespace WT.Controllers
             var product = productlistCollection.AsQueryable<Product>().SingleOrDefault(x => x.Id == productId);
             return View(product);
         }
-        public ActionResult Cart(string id)
+        public ActionResult AddToCart(string id)
         {
             var billId = new ObjectId(id);
             var bill = billCollection.AsQueryable<Bill>().SingleOrDefault(x => x.Id == billId);
             return View(bill);
         }
         [HttpPost]
-        public ActionResult Cart(string id, Bill bill)
+        public ActionResult AddToCart(string id, Bill bill)
         {
-            
+             
+             try
+            {
+                // TODO: Add insert logic here
+                billCollection.InsertOne(bill);      //we are inserting
+                return RedirectToAction("Bill");
+
+            }
+            catch
+            {
+                return View(bill);
+            }
         }
+        public ActionResult Cart(string id)
+        {
+            var billId = new ObjectId(id);
+            var bill = billCollection.AsQueryable<Bill>().SingleOrDefault(x => x.Id == billId);
+            return View(bill);
+        }
+        //[HttpPost]
+        //public ActionResult Cart(string id, Bill bill)
+        //{
+            
+        //}
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";

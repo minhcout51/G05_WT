@@ -11,8 +11,10 @@
 
         <h1 class="Product-Price">@Html.DisplayFor(model => model.Price) đ<br /></h1>
         <h1>Độ tuổi: @Html.DisplayFor(model => model.Age) </h1>
-        <input type="button" class="btn btn-info" value="Let's Go!" onclick="location.href='@Url.Action("Action", "Controller")'" />
-         
+        @*<input type="button" class="btn btn-info" value="Let's Go!" onclick="location.href='@Url.Action("Action", "Controller")'" />*@
+
+        @*@Html.ActionLink("Thêm vào giỏ", "Cart", "Home", new { id = item.Id }, new { @class = "btn btn-primary" })*@
+
     </div>
 </div>
 
