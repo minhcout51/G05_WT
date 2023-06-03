@@ -7,18 +7,22 @@ namespace WT.Models
 {
     public class Product
     {
+        
         [BsonId]
         //[BsonRepresentation(BsonType.ObjectId)]
         public ObjectId Id { get; set; }
-        [Required(ErrorMessage = "Name is required.")]
+        [Required]
+
         [BsonElement("Ten")]
         public string Name { get; set; }
+        [Required]
         [BsonElement("LoaiSanPham")]
         public string Category { get; set; }
+        [Required]
         [BsonElement("ThuongHieu")]
         public string Brand { get; set; }
         [BsonElement("Gia")]
-        public int Price { get; set; }
+        public string Price { get; set; }
         [BsonElement("DoTuoi")]
         public string Age { get; set; }
         [BsonElement("HinhAnh")]

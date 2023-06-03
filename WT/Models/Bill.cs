@@ -21,12 +21,12 @@ namespace WT.Models
         public int Quantity { get; set; }
       
         [BsonElement("ThanhTien")]
-        public int TotalCost { get; set; }
+        public string TotalCost { get; set; }
         [BsonElement("NguoiMua")]
         public string Customer { get; set; }
         [BsonElement("TinhTrang")]
         public string Status { get; set; }
         [BsonElement("DonGia")]
-        public int UnitPrice { get; set; }
+        public string UnitPrice { get; set; }
     }
 }

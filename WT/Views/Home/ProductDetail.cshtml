@@ -3,7 +3,10 @@
 @{
     ViewBag.Title = "ProductDetail";
 }
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 <div class="Product-Details">
     <div class="Product-Image"><img style="width: 25rem; height: 25rem; border: 0.1px solid black; border-radius:10px;  " src="~/wwwroot/Images/SanPham/@Html.DisplayFor(model =>model.Image)" /></div>
     <div class="Product-Detail">
@@ -13,12 +16,29 @@
         <h1>Độ tuổi: @Html.DisplayFor(model => model.Age) </h1>
         @*<input type="button" class="btn btn-info" value="Let's Go!" onclick="location.href='@Url.Action("Action", "Controller")'" />*@
 
-        @*@Html.ActionLink("Thêm vào giỏ", "Cart", "Home", new { id = item.Id }, new { @class = "btn btn-primary" })*@
+        @*@Html.ActionLink("Thêm vào giỏ", "Cart", "Home", new { @class = "btn btn-primary " })*@
+    <button type="button" class="btn btn-success Cart">
+        Thêm vào giỏ
+        @*<i class="material-symbols-outlined Cart-Icon" style="width:1rem; height:1rem;">
+            shopping_cart
+        </i>*@
+        <i class="fa fa-shopping-cart"></i>
+    </button>
 
     </div>
 </div>
 
 <style>
+
+    .Cart {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        margin: 1rem 0 0 0;
+    }
+    .Cart:hover{
+        background-color:white;
+        color: green;
+    }
     .Product-Details {
         display: flex;
         margin: 1rem 0 0 0;

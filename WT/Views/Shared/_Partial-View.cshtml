@@ -39,28 +39,28 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between " >
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item" id="2nd-li">
-                            @Html.ActionLink("Trang chủ", "Index", "Home", new { style = "text-decoration:none; color:black; " })
+                            @Html.ActionLink("Trang chủ", "Index", "Home", new { style = "text-decoration:none; color:black; font-size:1.35rem; " })
                         </li>
                         <li class="nav-item" id="2nd-li">
                             @*<a class="nav-link text-dark" href="~/Views/Home/ProductList.cshtml" asp-controller="Home" asp-action="ProductList">Sản phẩm</a>*@
-                            @Html.ActionLink("Sản phẩm","Products","Home", new { style = "text-decoration:none; color:black; " })
+                            @Html.ActionLink("Sản phẩm","Products","Home", new { style = "text-decoration:none; color:black; font-size:1.35rem;" })
                         </li>
                         @*<li class="nav-item" id="2nd-li">
             <a class="nav-link text-dark " asp-area="" asp-controller="" asp-action="">Sản phẩm</a>
         </li>*@
                     <li class="nav-item" id="2nd-li">
-                        @Html.ActionLink("Giỏ hàng", "AddToCart", "Home", new { style = "text-decoration:none; color:black; " })
+                        @Html.ActionLink("Giỏ hàng", "AddToCart", "Home", new { style = "text-decoration:none; color:black; font-size:1.35rem;" })
                     </li>
                         @* <li class="nav-item" id="2nd-li">
             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Login_Modal">Login</a>
         </li>*@
 
                     <li class="nav-item" id="2nd-li">
-                        @Html.ActionLink("Khuyến mãi", "AddToCart", "Home", new { style = "text-decoration:none; color:black; " })
+                        @Html.ActionLink("Khuyến mãi", "AddToCart", "Home", new { style = "text-decoration:none; color:black; font-size:1.35rem;" })
                     </li>
                         
                     <li class="nav-item" id="2nd-li">
-                        @Html.ActionLink("Hệ thống cửa hàng", "AddToCart", "Home", new { style = "text-decoration:none; color:black; " })
+                        @Html.ActionLink("Hệ thống cửa hàng", "AddToCart", "Home", new { style = "text-decoration:none; color:black; font-size:1.35rem;" })
                     </li>
                     </ul>
                 </div>
@@ -68,120 +68,49 @@
         </nav>
     </header>
     <body>
-    <div class="container content">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+        <div class="container content" style="height:44rem;">
+            <main role="main" class="" style="height:44rem;">
+                @RenderBody()
+            </main>
+        </div>
     </body>
-    @*Footer*@
-<footer class="border-top footer text-muted">
-    <div class="container-footer">
-        <div class="Logo">
-            <img class="WebToy-Logo" alt="WebToy logo" src="~/wwwroot/Images/Logo-NoBackground.png" />
-        </div>
-        <div class="LienHe">
-            <ul class="DanhSach-ThongTin">
-                <li class="Li-ThongTin"> Điện thoại: 0123456789</li>
-                <li class="Li-ThongTin"> Email: g05webtoy@gmail.com</li>
-                <li class="Li-ThongTin"> Địa chỉ: 1 Quang Trung Quận 12</li>
-            </ul>
-        </div>
-        <div class="ThongTin">
-            <p class="P-ThongTin">WebToy là cửa hàng bán đồ chơi <br /> gồm nhiều sản phẩm với nhiều loại đồ chơi khác nhau <br /> dành cho trẻ em nhiều độ tuổi khác nhau</p>
-        </div>
-        <div class="ThanhToan">
-            <ul class="DanhSach_MXH">
-                <p class="KetNoi"> Kết nối với chúng tôi</p>
-                <a target="_blank" href="https://www.facebook.com"><img src="~/wwwroot/Images/facebook.png" /></a>
-                <a target="_blank" href="https://www.instagram.com"><img src="~/wwwroot/Images/instagram.png" /></a>
-                <a target="_blank" href="https://discord.com"><img src="~/wwwroot/Images/discord.png" /></a>
-            </ul>
-            <ul class="DanhSach_ThanhToan">
-                <p class="ThanhToan">Phương thức thanh toán</p>
-                <a target="_blank" href=""><img src="~/wwwroot/Images/cash.png" /></a>
-                <a target="_blank" href=""><img src="~/wwwroot/Images/cashless-payment.png" /></a>
-                <a target="_blank" href=""><img src="~/wwwroot/Images/cash-on-delivery.png" /></a>
-            </ul>
-        </div>
-    </div>
-</footer>
 
-    <script src="~/wwwroot/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/wwwroot/js/site.js" asp-append-version="true"></script>
-    
+        @*Footer*@
+        <footer class="border-top footer text-muted">
+            <div class="container-footer">
+                <div class="Logo">
+                    <img class="WebToy-Logo" alt="WebToy logo" src="~/wwwroot/Images/Logo-NoBackground.png" />
+                </div>
+                <div class="LienHe">
+                    <ul class="DanhSach-ThongTin">
+                        <li class="Li-ThongTin"> Điện thoại: 0123456789</li>
+                        <li class="Li-ThongTin"> Email: g05webtoy@gmail.com</li>
+                        <li class="Li-ThongTin"> Địa chỉ: 1 Quang Trung Quận 12</li>
+                    </ul>
+                </div>
+                <div class="ThongTin">
+                    <p class="P-ThongTin">WebToy là cửa hàng bán đồ chơi <br /> gồm nhiều sản phẩm với nhiều loại đồ chơi khác nhau <br /> dành cho trẻ em nhiều độ tuổi khác nhau</p>
+                </div>
+                <div class="ThanhToan">
+                    <ul class="DanhSach_MXH">
+                        <p class="KetNoi"> Kết nối với chúng tôi</p>
+                        <a target="_blank" href="https://www.facebook.com"><img src="~/wwwroot/Images/facebook.png" /></a>
+                        <a target="_blank" href="https://www.instagram.com"><img src="~/wwwroot/Images/instagram.png" /></a>
+                        <a target="_blank" href="https://discord.com"><img src="~/wwwroot/Images/discord.png" /></a>
+                    </ul>
+                    <ul class="DanhSach_ThanhToan">
+                        <p class="ThanhToan">Phương thức thanh toán</p>
+                        <a target="_blank" href=""><img src="~/wwwroot/Images/cash.png" /></a>
+                        <a target="_blank" href=""><img src="~/wwwroot/Images/cashless-payment.png" /></a>
+                        <a target="_blank" href=""><img src="~/wwwroot/Images/cash-on-delivery.png" /></a>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+        <script src="~/wwwroot/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/wwwroot/js/site.js" asp-append-version="true"></script>
+   
 </html>
-@*Đăng nhập*@
-<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header border-bottom-0">
-        
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-         &times;
-        </button>
-      </div>
-      
-      <div class="modal-body">
-        <div class="form-title text-center">
-          <h4>Đăng nhập</h4>
-        </div>
-        <div class="d-flex flex-column text-center">
-          <form>
-            <div class="form-group">
-              <input type="email" class="form-control" id="username1"placeholder="User name ...">
-            </div>
-            <div class="form-group">
-              <input type="password" class="form-control" id="password1" placeholder="Mật khẩu ...">
-            </div>
-            <div class="Button">
-            <button type="button" class="btn btn-info btn-block btn-round btn-xs Login-Modal">Đăng nhập </button>
-             <div class="modal-footer d-flex justify-content-center">
-        <div class="signup-section" style="font-size:1.23rem;">Chưa có tài khoản? </div>
-        <div class="SignUp-Button-Div"><button type="button" class="btn btn-secondary btn-block btn-round btn-xs SignUp" data-toggle="modal" data-target="#signupModal" href="..//Views/Home/SignUp_Modal.cshtml"> Đăng ký </button></div></div>
-      </div>
-          </form>     
-          <div class="d-flex justify-content-center social-buttons">
-          </div>
-        </div>
-      </div>
-    </div>
-      
-  </div>
-</div>
-@* Đăng ký*@
-<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header border-bottom-0">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-         &times;
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="form-title text-center">
-          <h4>Đăng ký</h4>
-        </div>
-        <div class="d-flex flex-column text-center">
-          <form >
-            <div class="form-group">
-              <input type="email" class="form-control" id="username1"placeholder="User name ...">
-            </div>
-            <div class="form-group">
-              <input type="password" class="form-control" id="password1" placeholder="Mật khẩu ...">
-            </div>
-            <div class="Button">
-            <button type="button" class="btn btn-info btn-block btn-round btn-xs">Đăng ký </button>
-             <div class="modal-footer d-flex justify-content-center">
 
-      </div>
-          </form>     
-          <div class="d-flex justify-content-center social-buttons">
-          </div>
-        </div>
-      </div>
-    </div>
-     
-  </div>
-</div>

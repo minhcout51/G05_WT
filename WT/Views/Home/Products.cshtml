@@ -19,7 +19,8 @@
                 <h5>Độ tuổi: @Html.DisplayFor(modelItem => item.Age)<br /></h5>
 
                 <h5>@Html.ActionLink("Xem sản phẩm", "ProductDetail", new { id = item.Id })</h5>
-                <h5>@Html.ActionLink("Xem sản phẩm", "AddToCart", new { id = item.Id })</h5>
+
+
             </div>
 
             </div>
@@ -33,7 +34,10 @@
         overflow:auto;
 
     }
-    .Product-Image{
+    .Product-Div{
+        height:12rem;
+    }
+    .Product-Image {
         margin: 1rem 0 0 0;
     }
     .Detail{

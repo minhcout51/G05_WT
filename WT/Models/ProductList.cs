@@ -19,7 +19,7 @@ namespace WT.Models
         [BsonElement("ThuongHieu")]
         public string Brand { get; set; }
         [BsonElement("Gia")]
-        public int Price { get; set; }
+        public string Price { get; set; }
         [BsonElement("DoTuoi")]
         public string Age { get; set; }
         [BsonElement("HinhAnh")]

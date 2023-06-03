@@ -45,6 +45,11 @@ a.SanPhamAL {
 footer {
      background-color: #FFEFD5;
     height: 12.3rem;
+    position:absolute;
+    bottom: 0;
+}
+body::after{
+
 }
 .ThongTin {
     margin: 1.4rem 0 0 1rem;

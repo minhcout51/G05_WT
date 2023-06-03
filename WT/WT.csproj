@@ -1151,8 +1151,12 @@
     <Content Include="wwwroot\Images\Logo.png" />
     <Content Include="wwwroot\Images\SanPham\BanhKemCherry.jpg" />
     <Content Include="wwwroot\Images\SanPham\BanhKemMini.jpg" />
+    <Content Include="wwwroot\Images\SanPham\D.png" />
     <Content Include="wwwroot\Images\SanPham\Lego-CuopBien.png" />
     <Content Include="wwwroot\Images\SanPham\Lego-KhungLong.png" />
+    <Content Include="wwwroot\Images\SanPham\Lego-MayBay.png" />
+    <Content Include="wwwroot\Images\SanPham\Lego-NguaTuyet.jpg" />
+    <Content Include="wwwroot\Images\SanPham\ThapBanhKem.jpg" />
     <Content Include="wwwroot\js\HomeIndex.js" />
     <Content Include="wwwroot\js\Login_Modal.js" />
     <Content Include="wwwroot\js\site.js" />
