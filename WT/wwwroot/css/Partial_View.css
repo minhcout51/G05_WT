@@ -3,10 +3,12 @@
 }
 #DangNhap{
     margin: 2.5rem 0 0 0;
+
 }
-a.SanPhamAL {
-    text-decoration: none;
-}
+
+    a.SanPhamAL {
+        text-decoration: none;
+    }
 .a-Logo {
     margin-top: 0.5rem;
 }
@@ -42,15 +44,27 @@ a.SanPhamAL {
     margin: 1rem 0 0 0;
     line-height: 1rem;
 }
-footer {
-     background-color: #FFEFD5;
-    height: 12.3rem;
-    position:absolute;
-    bottom: 0;
-}
-body::after{
+body{ height: 140vh; margin:0; position:relative; }
 
+
+/* The article fills all the space between header & footer */
+body{ display:flex; flex-direction:column;}
+
+article{ flex:1; margin: 4rem 0 0 0; }
+header {
+    position: fixed;
+    width:100%; 
+    min-height: 50px;
+    top:0;
 }
+footer {
+    background-color: #FFEFD5;
+    height: 18vh;
+    position: fixed;
+    bottom: 0;
+    min-height: 50px;
+}
+
 .ThongTin {
     margin: 1.4rem 0 0 1rem;
     font-size: 1.4rem;

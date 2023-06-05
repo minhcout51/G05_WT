@@ -10,7 +10,7 @@
 <div class="Product-Details">
     <div class="Product-Image"><img style="width: 25rem; height: 25rem; border: 0.1px solid black; border-radius:10px;  " src="~/wwwroot/Images/SanPham/@Html.DisplayFor(model =>model.Image)" /></div>
     <div class="Product-Detail">
-        <h1>@Html.DisplayFor(model => model.Name)  <br /></h1>
+        <h1 class="Name">@Html.DisplayFor(model => model.Name)  <br /></h1>
 
         <h1 class="Product-Price">@Html.DisplayFor(model => model.Price) đ<br /></h1>
         <h1>Độ tuổi: @Html.DisplayFor(model => model.Age) </h1>
@@ -29,7 +29,10 @@
 </div>
 
 <style>
-
+    .Name {
+        color: #00AA95;
+        font-size:2.5rem;
+    }
     .Cart {
         font-size: 1.2rem;
         line-height: 1.8rem;
@@ -41,7 +44,7 @@
     }
     .Product-Details {
         display: flex;
-        margin: 1rem 0 0 0;
+        margin: 4rem 0 0 0;
     }
     .Product-Detail{
         margin: 0 0 0 1.5rem;
@@ -50,6 +53,7 @@
         font-size: 1.5625rem;
     }
     .Product-Price {
-        color: #00AA95;
+        color: #E63314;
+        font-size:1.8rem;
     }
 </style>

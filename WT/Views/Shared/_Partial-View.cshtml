@@ -1,4 +1,4 @@
-﻿ <!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -7,110 +7,115 @@
     <link rel="stylesheet" href="~/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/wwwroot/css/site.css" />
     <link rel="stylesheet" href="~/wwwroot/css/Partial_View.css" />
-      <link rel="icon" type="image/png" sizes="64x64" href="~/wwwroot/Images/Logo-NoBackground.png" />
- 
-     <script src="~/js/Login_Modal.js"></script>
+    <link rel="icon" type="image/png" sizes="64x64" href="~/wwwroot/Images/Logo-NoBackground.png" />
+
+    <script src="~/js/Login_Modal.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link  type="stylesheet" href="~/wwwroot/css/Login_Modal.css"/>
-    
+    <link type="stylesheet" href="~/wwwroot/css/Login_Modal.css" />
+
 </head>
+</html>
 
     <header class="">
         @*1st Navbar*@
-       <nav class="navbar navbar-expand-sm navbar-light bg-light justify-content-center" style="height:3.5rem;">
-           <ul class="ul-1st">
-  <li class="li-1st"><div class="a-Logo"><a class="navbar-brand"  href="@Url.Action("Index", "Home", null)"><img src="~/wwwroot/Images/Logo-NoBackground100.png"/></a></div></li>
-  
-  <li class="li-1st"><div class="">
-        <input placeholder="Tìm kiếm sản phẩm" class="form-control Search "  type="text" >
-     </div> </li>
-      
-      <li class="li-1st"><div>
-    <!--<button type="button" class="btn btn-primary Login"-->  @*asp-area="" asp-controller="Home" asp-action="Login_Modal"*@ <!--data-toggle="modal" data-target="#loginModal">Đăng nhập</button>-->
-    <input  style="margin-top:2.5rem;" id="DangNhap" type="button" class="btn btn-primary" value="Đăng nhập" onclick="location.href='@Url.Action("Action", "Controller")'" />
-</div></li></ul>
+        <nav class="navbar navbar-expand-sm navbar-light bg-light justify-content-center" style="height:3.5rem;">
+            <ul class="ul-1st">
+                <li class="li-1st"><div class="a-Logo"><a class="navbar-brand" href="@Url.Action("Index", "Home", null)"><img src="~/wwwroot/Images/Logo-NoBackground100.png" /></a></div></li>
 
-        
-</nav>
-            @* 2nd navbar style="background-color:#F5FFFA;" *@
-        <nav  style="background-color:#FFEFD5;" class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow">
+                <li class="li-1st">
+                    <div class="">
+                        <input placeholder="Tìm kiếm sản phẩm" class="form-control Search " type="text">
+                    </div>
+                </li>
+
+                <li class="li-1st">
+                    <div>
+                        <!--<button type="button" class="btn btn-primary Login"-->  @*asp-area="" asp-controller="Home" asp-action="Login_Modal"*@ <!--data-toggle="modal" data-target="#loginModal">Đăng nhập</button>-->
+                        <input style="margin-top:2.5rem;" id="DangNhap" type="button" class="btn btn-primary" value="Đăng nhập" onclick="location.href='@Url.Action("Action", "Controller")'" />
+                    </div>
+                </li>
+            </ul>
+
+
+        </nav>
+        @* 2nd navbar style="background-color:#F5FFFA;" *@
+        <nav style="background-color:#FFEFD5;" class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow">
             <div class="container ">
-               
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between " >
+
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between ">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item" id="2nd-li">
                             @Html.ActionLink("Trang chủ", "Index", "Home", new { style = "text-decoration:none; color:black; font-size:1.35rem; " })
                         </li>
                         <li class="nav-item" id="2nd-li">
                             @*<a class="nav-link text-dark" href="~/Views/Home/ProductList.cshtml" asp-controller="Home" asp-action="ProductList">Sản phẩm</a>*@
-                            @Html.ActionLink("Sản phẩm","Products","Home", new { style = "text-decoration:none; color:black; font-size:1.35rem;" })
+                            @Html.ActionLink("Sản phẩm", "Products", "Home", new { style = "text-decoration:none; color:black; font-size:1.35rem;" })
                         </li>
                         @*<li class="nav-item" id="2nd-li">
-            <a class="nav-link text-dark " asp-area="" asp-controller="" asp-action="">Sản phẩm</a>
-        </li>*@
-                    <li class="nav-item" id="2nd-li">
-                        @Html.ActionLink("Giỏ hàng", "AddToCart", "Home", new { style = "text-decoration:none; color:black; font-size:1.35rem;" })
-                    </li>
+                                <a class="nav-link text-dark " asp-area="" asp-controller="" asp-action="">Sản phẩm</a>
+                            </li>*@
+                        <li class="nav-item" id="2nd-li">
+                            @Html.ActionLink("Giỏ hàng", "AddToCart", "Home", new { style = "text-decoration:none; color:black; font-size:1.35rem;" })
+                        </li>
                         @* <li class="nav-item" id="2nd-li">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Login_Modal">Login</a>
-        </li>*@
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Login_Modal">Login</a>
+                            </li>*@
 
-                    <li class="nav-item" id="2nd-li">
-                        @Html.ActionLink("Khuyến mãi", "AddToCart", "Home", new { style = "text-decoration:none; color:black; font-size:1.35rem;" })
-                    </li>
-                        
-                    <li class="nav-item" id="2nd-li">
-                        @Html.ActionLink("Hệ thống cửa hàng", "AddToCart", "Home", new { style = "text-decoration:none; color:black; font-size:1.35rem;" })
-                    </li>
+                        <li class="nav-item" id="2nd-li">
+                            @Html.ActionLink("Khuyến mãi", "AddToCart", "Home", new { style = "text-decoration:none; color:black; font-size:1.35rem;" })
+                        </li>
+
+                        <li class="nav-item" id="2nd-li">
+                            @Html.ActionLink("Hệ thống cửa hàng", "AddToCart", "Home", new { style = "text-decoration:none; color:black; font-size:1.35rem;" })
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
     <body>
-        <div class="container content" style="height:44rem;">
-            <main role="main" class="" style="height:44rem;">
+        <article>
+            <div class="container content" style="height:10rem;">
                 @RenderBody()
-            </main>
-        </div>
-    </body>
 
-        @*Footer*@
-        <footer class="border-top footer text-muted">
-            <div class="container-footer">
-                <div class="Logo">
-                    <img class="WebToy-Logo" alt="WebToy logo" src="~/wwwroot/Images/Logo-NoBackground.png" />
-                </div>
-                <div class="LienHe">
-                    <ul class="DanhSach-ThongTin">
-                        <li class="Li-ThongTin"> Điện thoại: 0123456789</li>
-                        <li class="Li-ThongTin"> Email: g05webtoy@gmail.com</li>
-                        <li class="Li-ThongTin"> Địa chỉ: 1 Quang Trung Quận 12</li>
-                    </ul>
-                </div>
-                <div class="ThongTin">
-                    <p class="P-ThongTin">WebToy là cửa hàng bán đồ chơi <br /> gồm nhiều sản phẩm với nhiều loại đồ chơi khác nhau <br /> dành cho trẻ em nhiều độ tuổi khác nhau</p>
-                </div>
-                <div class="ThanhToan">
-                    <ul class="DanhSach_MXH">
-                        <p class="KetNoi"> Kết nối với chúng tôi</p>
-                        <a target="_blank" href="https://www.facebook.com"><img src="~/wwwroot/Images/facebook.png" /></a>
-                        <a target="_blank" href="https://www.instagram.com"><img src="~/wwwroot/Images/instagram.png" /></a>
-                        <a target="_blank" href="https://discord.com"><img src="~/wwwroot/Images/discord.png" /></a>
-                    </ul>
-                    <ul class="DanhSach_ThanhToan">
-                        <p class="ThanhToan">Phương thức thanh toán</p>
-                        <a target="_blank" href=""><img src="~/wwwroot/Images/cash.png" /></a>
-                        <a target="_blank" href=""><img src="~/wwwroot/Images/cashless-payment.png" /></a>
-                        <a target="_blank" href=""><img src="~/wwwroot/Images/cash-on-delivery.png" /></a>
-                    </ul>
-                </div>
             </div>
-        </footer>
+        </article>
 
-        <script src="~/wwwroot/lib/jquery/dist/jquery.min.js"></script>
-        <script src="~/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="~/wwwroot/js/site.js" asp-append-version="true"></script>
-   
-</html>
+    </body>
+@*Footer*@
+<footer class="border-top footer text-muted">
+    <div class="container-footer">
+        <div class="Logo">
+            <img class="WebToy-Logo" alt="WebToy logo" src="~/wwwroot/Images/Logo-NoBackground.png" />
+        </div>
+        <div class="LienHe">
+            <ul class="DanhSach-ThongTin">
+                <li class="Li-ThongTin"> Điện thoại: 0123456789</li>
+                <li class="Li-ThongTin"> Email: g05webtoy@gmail.com</li>
+                <li class="Li-ThongTin"> Địa chỉ: 1 Quang Trung Quận 12</li>
+            </ul>
+        </div>
+        <div class="ThongTin">
+            <p class="P-ThongTin">WebToy là cửa hàng bán đồ chơi <br /> gồm nhiều sản phẩm với nhiều loại đồ chơi khác nhau <br /> dành cho trẻ em nhiều độ tuổi khác nhau</p>
+        </div>
+        <div class="ThanhToan">
+            <ul class="DanhSach_MXH">
+                <p class="KetNoi"> Kết nối với chúng tôi</p>
+                <a target="_blank" href="https://www.facebook.com"><img src="~/wwwroot/Images/facebook.png" /></a>
+                <a target="_blank" href="https://www.instagram.com"><img src="~/wwwroot/Images/instagram.png" /></a>
+                <a target="_blank" href="https://discord.com"><img src="~/wwwroot/Images/discord.png" /></a>
+            </ul>
+            <ul class="DanhSach_ThanhToan">
+                <p class="ThanhToan">Phương thức thanh toán</p>
+                <a target="_blank" href=""><img src="~/wwwroot/Images/cash.png" /></a>
+                <a target="_blank" href=""><img src="~/wwwroot/Images/cashless-payment.png" /></a>
+                <a target="_blank" href=""><img src="~/wwwroot/Images/cash-on-delivery.png" /></a>
+            </ul>
+        </div>
+    </div>
+
+    <script src="~/wwwroot/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/wwwroot/js/site.js" asp-append-version="true"></script>
+</footer>
 

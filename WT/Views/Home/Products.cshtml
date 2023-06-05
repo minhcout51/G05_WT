@@ -11,10 +11,10 @@
             <div class="Product-Image"><img class="Image" src="~/wwwroot/Images/SanPham/@Html.DisplayFor(modelItem =>item.Image)"  /></div>
             
             <div class="Detail">
-                <h5>@Html.DisplayFor(modelItem => item.Name)  <br /></h5>
+                <h3>@Html.DisplayFor(modelItem => item.Name)  <br /></h3>
 
 
-                <h5>@Html.DisplayFor(modelItem => item.Price)<br /></h5>
+                <h5 class="Price">@Html.DisplayFor(modelItem => item.Price) đ<br /></h5>
 
                 <h5>Độ tuổi: @Html.DisplayFor(modelItem => item.Age)<br /></h5>
 
@@ -27,6 +27,13 @@
     }
 
 <style>
+    .Price {
+        color: #E63314;
+        font-size:1.5rem;
+    }
+    h3 {
+        color:#00AA95;
+    }
     .Image{
         max-width:10rem;
         height:auto;
@@ -35,7 +42,8 @@
 
     }
     .Product-Div{
-        height:12rem;
+        height:11rem;
+        margin: 2rem 0 -2.5rem 0;
     }
     .Product-Image {
         margin: 1rem 0 0 0;
