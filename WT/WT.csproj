@@ -232,8 +232,10 @@
     <Compile Include="Models\Bill.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\OurDbContext.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductList.cs" />
+    <Compile Include="Models\UserAccount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
