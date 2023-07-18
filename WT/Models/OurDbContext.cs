@@ -9,7 +9,7 @@ using System.Web;
 
 namespace WT.Models
 {
-    public class OurDbContext 
+    public class OurDbContext: UserAccount
     {
           
 
